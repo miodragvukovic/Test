@@ -198,6 +198,10 @@ p a {
 	font-weight: 900;
 	text-decoration: underline;
 	color: $link-color;
+	transition: $default-transition;
+	&:hover {
+		color: $highlight-color;
+	}
 }
 
 .small-text {
@@ -214,17 +218,48 @@ p a {
 	border-bottom: 1px solid $main-font-color;
 }
 
+.reveal-on-hover {
+	display: none;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	top: 20px;
+	background-color: $main-font-color;
+	color: $white;
+	width: 170px;
+	padding: 10px;
+	border-radius: 5px;
+	font-size: 1rem;
+	z-index: 1;
+	&:before {
+		content: '';
+		position: absolute;
+		background-color: $main-font-color;
+		height: 10px;
+		width: 10px;
+		left: 50%;
+		transform: translate(-50%, calc(-10px - 50%)) rotate(45deg);
+	}
+}
+
 .question {
+	position: relative;
+	top: -5px;
 	cursor: pointer;
 	display: inline-block;
 	font-size: 1.2rem;
 	line-height: 1.2rem;
-	background-color: $secondary-font-color;
+	background-color: rgba(43, 103, 245, 0.5);
 	border-radius: 50%;
 	color: $white;
 	height: 12px;
 	width: 12px;
-	opacity: .5;
+	&:hover {
+		.reveal-on-hover {
+			display: block;
+		}
+		
+	}
 }
 
 .card {
@@ -264,6 +299,12 @@ p a {
 		margin-bottom: 15px;
 		border-radius: 5px;
 		overflow: hidden;
+		img {
+			transition: $default-transition;
+			&:hover {
+				transform: scale(1.05);
+			}
+		}
 	}
 	@media (max-width: $lg) {
 		h3 {
@@ -427,9 +468,20 @@ p a {
 
 .navigation {
 	position: absolute;
+	background-color: $white;
 	width: 100%;
 	padding: 20px 0;
 	z-index: 1;
+	transform: translate3d(0, -100%, 0);
+	transition: $default-transition;
+	&.absolute {
+		position: absolute;
+		transform: translate3d(0, 0, 0);
+	}
+	&.fixed {
+		position: fixed;
+		transform: translate3d(0, 0, 0);
+	}
 	.logo {
 		max-width: 150px;
 		z-index: 5;
@@ -441,6 +493,9 @@ p a {
 		margin-right: 15px;
 			&:last-child {
 				margin-right: 0;
+			}
+			&.button-wrap {
+				padding: 0;
 			}
 		}
 	}

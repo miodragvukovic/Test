@@ -4,6 +4,20 @@ document.querySelector('.dropdown-trigger').addEventListener('click', function()
 	navbar.classList.contains('active') ? navbar.classList.remove('active') : navbar.classList.add('active');
 });
 
+window.addEventListener('scroll', function(){
+	let top = pageYOffset;
+	if ( top > navbar.offsetHeight + 50 ) {
+		navbar.classList.remove('absolute')
+		setTimeout(function(){
+			navbar.classList.add('fixed')
+		}, 300);
+		
+	} else {
+		navbar.classList.remove('fixed')
+
+		navbar.classList.add('absolute')
+	}
+});
 
 
 
