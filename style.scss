@@ -458,12 +458,13 @@ p a {
 	padding: 20px 0;
 	z-index: 1;
 	transform: translate3d(0, -100%, 0);
-	transition: $default-transition;
+	
 	&.absolute {
 		position: absolute;
 		transform: translate3d(0, 0, 0);
 	}
 	&.fixed {
+		transition: $default-transition;
 		position: fixed;
 		transform: translate3d(0, 0, 0);
 	}
