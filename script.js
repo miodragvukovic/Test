@@ -1,6 +1,7 @@
 // GLOBAL VARIABLES
 
 let navbar = document.querySelector('.navigation');
+const navbarHeight = navbar.offsetHeight;
 
 // DROPDOWN TRIGGER EVENT
 
