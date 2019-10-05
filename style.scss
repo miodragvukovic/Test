@@ -591,6 +591,7 @@ p a {
 	}
 	@media (max-width: $lg) {
 		padding: 130px 0 50px;
+		margin-bottom: 0;
 		.background-image {
 			height: 70%;
 		}
@@ -680,9 +681,6 @@ p a {
 	ul li {
 		margin-bottom: 20px;
 		line-height: 2.8rem;
-	}
-	@media (max-width: $lg) {
-		padding: 0;
 	}
 }
 
