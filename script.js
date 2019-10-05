@@ -12,7 +12,6 @@ document.querySelector('.dropdown-trigger').addEventListener('click', () => {
 
 window.addEventListener('scroll', () => {
 	let top = pageYOffset;
-	let offsetTriggerHeight = top + (window.innerHeight * 0.5 )
 	if ( top > navbarHeight ) {
 		navbar.classList.remove('absolute');
 		setTimeout(function(){
