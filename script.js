@@ -6,7 +6,7 @@ document.querySelector('.dropdown-trigger').addEventListener('click', function()
 
 window.addEventListener('scroll', function(){
 	let top = pageYOffset;
-	if ( top > navbar.offsetHeight + 50 ) {
+	if ( top > navbar.offsetHeight ) {
 		navbar.classList.remove('absolute')
 		setTimeout(function(){
 			navbar.classList.add('fixed')
