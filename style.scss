@@ -431,24 +431,6 @@ p a {
 	    	top: 26px;
 	    }
 	}
-	&.active {
-	  	&:before {
-	  		transform: rotate(-45deg);
-	  		background: $white;
-	  	}
-	  	span {
-	  		background: $white;
-	  		&:nth-child(1) {
-				opacity: 0;
-	    	}
-	    	&:nth-child(2) {
-				transform: rotate(45deg);
-	    	}
-	    	&:nth-child(3) {
-				opacity: 0;
-	    	}
-	  	}
-	}
 	@media (max-width: $lg) {
 		display: block;
 	}
@@ -544,6 +526,24 @@ p a {
 			position: fixed;
 			.navbar {
 				display: block;
+			}
+			.dropdown-trigger {
+			  	&:before {
+			  		transform: rotate(-45deg);
+			  		background: $white;
+			  	}
+			  	span {
+			  		background: $white;
+			  		&:nth-child(1) {
+						opacity: 0;
+			    	}
+			    	&:nth-child(2) {
+						transform: rotate(45deg);
+			    	}
+			    	&:nth-child(3) {
+						opacity: 0;
+			    	}
+			  	}
 			}
 		}
 	}
