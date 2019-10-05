@@ -11,7 +11,7 @@ window.addEventListener('scroll', () => {
 		navbar.classList.remove('absolute')
 		setTimeout(function(){
 			navbar.classList.add('fixed')
-		}, 50);
+		}, 300);
 	} else {
 		navbar.classList.remove('fixed')
 		navbar.classList.add('absolute')
